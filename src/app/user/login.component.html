@@ -1,3 +1,51 @@
-<p>login works!</p>
-<button [routerLink]="['/main']" routerLinkActive="router-link-active">Login</button>
-<button>Register</button>
+<section class="my-5 mx-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-5 px-5 pt-5">
+                <!--   <img class='img-fluid' src="../../assets/images/login_page_logo.jpg" alt="ExpensesLogo"> -->
+                <h1>Harshet Credit Card <br> Expense Tracker</h1>
+            </div>
+            <div class="col-md-7 px-5 pt-5 ">
+                <h1 class='logo my-auto'>
+                    <img src="../../assets/images/Logo.png" alt="">
+
+                </h1>
+
+                <form #LoginForm='ngForm'>
+                    <div class="form-row mb-1">
+
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" id="inputEmail" name='inputEmail' [(ngModel)]='login.userId'>
+
+                        </div>
+
+                    </div>
+                    <div class="form-row mb-1">
+
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="inputPassword" name='inputPassword' [(ngModel)]='login.password'>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row ">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-7 ">
+                            <button type="button" class="btn btn-primary float-right" (click)='log()' [routerLink]="['/main']" routerLinkActive="router-link-active">Login</button>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <a href="#">Forgot Password?</a>
+                    <p>Dont have an account? <a href="#"> Register Here</a></p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
